@@ -6,20 +6,21 @@ import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
 
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
-const Bar3D = ({ data }) => {
+const Bar3d = ({ data }) => {
   const chartConfigs = {
-    type: 'pie3d', // The chart type
-    width: '400', // Width of the chart
+    type: 'bar3d', // The chart type
+    width: '650', // Width of the chart
     height: '400', // Height of the chart
     dataFormat: 'json', // Data type
     dataSource: {
       // Chart Configuration
       chart: {
         //Set the chart caption
-        caption: 'Languages',
-        theme: 'fusion',
-        decimals: 0,
-        pieRadius: '45%',
+        caption: 'Most Forked',
+        yAxisName: 'Forks',
+        xAxisName: 'Repos',
+        xAxisNameFontSize: '16px',
+        yAxisNmaeFontSize: '16px',
       },
       // Chart Data
       data,
@@ -28,4 +29,4 @@ const Bar3D = ({ data }) => {
   return <ReactFC {...chartConfigs} />;
 };
 
-export default Bar3D;
+export default Bar3d;
