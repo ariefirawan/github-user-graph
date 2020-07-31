@@ -14,6 +14,7 @@ const Card = () => {
     location,
     twitter_username,
   } = githubUser;
+  console.log(twitter_username)
   return (
     <Wrapper>
       <header>
